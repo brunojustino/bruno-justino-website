@@ -25,8 +25,8 @@ const SITE_CONFIG = {
       name: "diary.brunojustino.com",
       url: "https://diary.brunojustino.com",
       description: {
-        pt: "Diário pessoal e blog.",
-        en: "Personal diary and blog.",
+        pt: "Diário pessoal",
+        en: "Personal diary",
       },
     },
     {
@@ -43,6 +43,14 @@ const SITE_CONFIG = {
       description: {
         pt: "Site da associação Assojafpe.",
         en: "Assojafpe association website.",
+      },
+    },
+    {
+      name: "blog.brunojustino.com",
+      url: "https://blog.brunojustino.com",
+      description: {
+        pt: "Blog pessoal.",
+        en: "Personal blog.",
       },
     },
   ],
