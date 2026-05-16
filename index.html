@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bruno Justino — IT Support & Software Developer. Retro portfolio.">
+  <title>Bruno Justino</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="crt-wrapper">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <div id="intro" class="intro" role="dialog" aria-labelledby="intro-title" aria-modal="true">
+      <div class="intro-inner">
+        <p class="intro-credit" data-i18n="intro_credit">© 2026 BRUNO JUSTINO</p>
+        <h1 id="intro-title" class="intro-title">BRUNO JUSTINO</h1>
+        <p class="intro-sub" data-i18n="intro_sub">IT SUPPORT &amp; DEVELOPER</p>
+        <button type="button" id="press-start" class="press-start blink" data-i18n="press_start">PRESS START</button>
+        <p class="intro-hint" data-i18n="intro_hint">ENTER · SPACE · CLICK</p>
+      </div>
+    </div>
+
+    <div id="site" class="site hidden" hidden>
+      <header class="header">
+        <div class="header-inner pixel-box">
+          <div class="header-top">
+            <h1 class="logo" data-i18n="site_title">BRUNO JUSTINO</h1>
+            <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Toggle language">PT | EN</button>
+          </div>
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list" id="nav-list">
+              <li><a href="#about" class="nav-link" data-section="about" data-i18n="nav_about">SOBRE</a></li>
+              <li><a href="#work" class="nav-link" data-section="work" data-i18n="nav_work">TRABALHO</a></li>
+              <li><a href="#projects" class="nav-link" data-section="projects" data-i18n="nav_projects">PROJETOS</a></li>
+              <li><a href="#skills" class="nav-link" data-section="skills" data-i18n="nav_skills">SKILLS</a></li>
+              <li><a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">CONTATO</a></li>
+            </ul>
+          </nav>
+          <p class="nav-hint" data-i18n="nav_hint">← → NAVEGAR · ENTER SELECIONAR</p>
+        </div>
+      </header>
+
+      <main class="main">
+        <section id="about" class="section pixel-box" aria-labelledby="about-heading">
+          <h2 id="about-heading" class="section-title" data-i18n="about_title">▶ SOBRE</h2>
+          <div class="about-grid">
+            <div class="avatar-wrap">
+              <img
+                src="assets/img/avatar.png"
+                alt="Bruno Justino"
+                class="avatar"
+                id="avatar-img"
+                width="96"
+                height="96"
+              >
+              <div class="avatar-fallback hidden" id="avatar-fallback" aria-hidden="true"></div>
+            </div>
+            <div class="about-text">
+              <p data-i18n="about_p1"></p>
+              <p data-i18n="about_p2"></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" class="section pixel-box" aria-labelledby="work-heading">
+          <h2 id="work-heading" class="section-title" data-i18n="work_title">▶ TRABALHO</h2>
+          <article class="work-entry">
+            <h3 class="work-company" data-i18n="work_company">Proinfo Sistemas</h3>
+            <p class="work-role" data-i18n="work_role">Suporte de TI &amp; Desenvolvimento de Software</p>
+            <p class="work-period" data-i18n="work_period">2011 — presente</p>
+            <ul class="work-bullets" id="work-bullets"></ul>
+          </article>
+        </section>
+
+        <section id="projects" class="section pixel-box" aria-labelledby="projects-heading">
+          <h2 id="projects-heading" class="section-title" data-i18n="projects_title">▶ PROJETOS</h2>
+          <ul class="project-list" id="project-list"></ul>
+        </section>
+
+        <section id="skills" class="section pixel-box" aria-labelledby="skills-heading">
+          <h2 id="skills-heading" class="section-title" data-i18n="skills_title">▶ SKILLS</h2>
+          <ul class="skill-list" id="skill-list"></ul>
+        </section>
+
+        <section id="contact" class="section pixel-box" aria-labelledby="contact-heading">
+          <h2 id="contact-heading" class="section-title" data-i18n="contact_title">▶ CONTATO</h2>
+          <p data-i18n="contact_text">Quer falar comigo? Envie um e-mail:</p>
+          <a href="#" id="contact-email" class="btn-pixel" data-i18n="contact_btn">ENVIAR E-MAIL</a>
+        </section>
+      </main>
+
+      <footer class="footer pixel-box">
+        <p data-i18n="footer_text">Feito com HTML, CSS e JavaScript — estilo NES.</p>
+        <p class="footer-year">© <span id="year"></span> Bruno Justino</p>
+      </footer>
+    </div>
+
+    <aside id="music-player" class="music-player pixel-box" aria-label="Music player">
+      <p class="music-label" data-i18n="music_label">BRUNO RADIO</p>
+      <p class="music-track" id="music-track-name">—</p>
+      <div class="music-controls">
+        <button type="button" id="music-prev" class="music-btn" aria-label="Previous track">◀◀</button>
+        <button type="button" id="music-play" class="music-btn music-btn-play" aria-label="Play">▶</button>
+        <button type="button" id="music-next" class="music-btn" aria-label="Next track">▶▶</button>
+        <button type="button" id="music-mute" class="music-btn" aria-label="Mute">🔇</button>
+      </div>
+      <label class="volume-label">
+        <span data-i18n="music_volume">VOL</span>
+        <input type="range" id="music-volume" min="0" max="1" step="0.05" value="0.7">
+      </label>
+      <p class="music-status hidden" id="music-status" data-i18n="music_no_tracks"></p>
+    </aside>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
